@@ -1,0 +1,23 @@
+import numpy as np
+
+def basisnl(nmin, nmax):
+    for n in range(nmin, nmax + 1):
+        for l in range(0, n):
+            yield n, l
+
+def test_basis():
+    nmin = 1
+    nmax = 3
+    basis = list(basisnl(nmin, nmax))
+
+    basis_compare = []
+    for n in range(nmin, nmax + 1):
+        for l in range(0, n):
+            basis_compare.append((n,l))
+
+    assert basis == basis_compare
+
+if __name__ == '__main__':
+    test_basis()
+
+
