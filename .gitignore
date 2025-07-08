@@ -204,6 +204,7 @@ $RECYCLE.BIN/
 
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+scratch.ipynb
 
 # IPython
 profile_default/
