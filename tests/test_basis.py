@@ -1,4 +1,4 @@
-from basis import basisnl
+from starkshifts.basis import basisnl
 
 def test_basis():
     nmin = 1
