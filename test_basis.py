@@ -1,9 +1,4 @@
-import numpy as np
-
-def basisnl(nmin, nmax):
-    for n in range(nmin, nmax + 1):
-        for l in range(0, n):
-            yield n, l
+from basis import basisnl
 
 def test_basis():
     nmin = 1
@@ -16,5 +11,3 @@ def test_basis():
             basis_compare.append((n,l))
 
     assert basis == basis_compare
-
-
