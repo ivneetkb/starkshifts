@@ -23,3 +23,4 @@ def test_basis_size():
 def test_invalid_basisnl():
     with pytest.raises(ValueError):
         list(basisnl(3, 1))
+
