@@ -14,7 +14,7 @@ class Matrix(ABC):
         lookuptable = {}
         index = 0
         for state in self.basis(**kwargs):
-            state.append(state)
+            states.append(state)
             lookuptable[state] = index
             index +=1
         return states, lookuptable

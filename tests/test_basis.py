@@ -24,3 +24,13 @@ def test_invalid_basisnl():
     with pytest.raises(ValueError):
         list(basisnl(3, 1))
 
+def test_basisnl_lmax():
+    nmin = 1
+    nmax = 10
+    lmax = 3
+
+    basis = set(basisnl(nmin, nmax, lmax=lmax))
+
+    basis_compare = { (n,l) for n,l in basisnl(nmin, nmax) if l <= lmax }
+
+    assert basis == basis_compare
