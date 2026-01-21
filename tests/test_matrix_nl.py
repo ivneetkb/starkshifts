@@ -7,10 +7,10 @@ def test_matrix_nl_shape():
     """
     nmin = 1
     nmax = 3
-    matrix_nl = matrix_nl(nmin, nmax)
+    mat = matrix_nl(nmin, nmax)
 
     #6 basis states {(1,0), (2,0), (2,1), (3,0), (3,1), (3,2)}
     expected_size = 6
 
     # Check the shape of the matrix
-    assert matrix_nl.matrix.shape == (expected_size, expected_size)
+    assert mat.matrix.shape == (expected_size, expected_size)
