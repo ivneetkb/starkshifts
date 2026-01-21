@@ -1,7 +1,10 @@
 import numpy as np
+from typing import Iterator, Tuple, Optional
 
 
-def basisnl(nmin, nmax, lmax=None):
+def basisnl(
+    nmin: int, nmax: int, lmax: Optional[int] = None
+) -> Iterator[Tuple[int, int]]:
     """
     Generates quantum numbers:
     n: principal quantum number
