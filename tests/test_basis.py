@@ -1,6 +1,7 @@
 from starkshifts.basis import basisnl
 import pytest
 
+
 def test_basis():
     nmin = 1
     nmax = 3
@@ -9,10 +10,11 @@ def test_basis():
     basis_compare = []
     for n in range(nmin, nmax + 1):
         for l in range(0, n):
-            basis_compare.append((n,l))
+            basis_compare.append((n, l))
 
     assert basis == basis_compare
-    
+
+
 def test_basis_size():
     nmin = 1
     nmax = 3
@@ -20,9 +22,11 @@ def test_basis_size():
 
     assert len(basis) == 6
 
+
 def test_invalid_basisnl():
     with pytest.raises(ValueError):
         list(basisnl(3, 1))
+
 
 def test_basisnl_lmax():
     nmin = 1
@@ -31,6 +35,6 @@ def test_basisnl_lmax():
 
     basis = set(basisnl(nmin, nmax, lmax=lmax))
 
-    basis_compare = { (n,l) for n,l in basisnl(nmin, nmax) if l <= lmax }
+    basis_compare = {(n, l) for n, l in basisnl(nmin, nmax) if l <= lmax}
 
     assert basis == basis_compare
