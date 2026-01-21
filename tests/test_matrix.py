@@ -1,11 +1,11 @@
 import pytest
-from starkshifts.matrix import Matrix
+from starkshifts.matrix import matrix
 
 def test_abstract_matrix_fail():
     """
     Test to check for abstract method requirement.
     """
     with pytest.raises(TypeError):
-        class IncompleteMatrix(Matrix):
+        class Incompletematrix(matrix):
             pass
-        matrix = IncompleteMatrix()
+        matrix = Incompletematrix()

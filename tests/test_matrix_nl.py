@@ -1,13 +1,13 @@
 import pytest
-from starkshifts.matrix_nl import Matrix_nl
+from starkshifts.matrix_nl import matrix_nl
 
 def test_matrix_nl_shape():
     """ 
-    Test to verify the shape of the generated matrix in Matrix_nl class. 
+    Test to verify the shape of the generated matrix in matrix_nl class. 
     """
     nmin = 1
     nmax = 3
-    matrix_nl = Matrix_nl(nmin, nmax)
+    matrix_nl = matrix_nl(nmin, nmax)
 
     #6 basis states {(1,0), (2,0), (2,1), (3,0), (3,1), (3,2)}
     expected_size = 6
